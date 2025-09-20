@@ -24,7 +24,7 @@ const ImageStyle = [
       e.preventDefault();
       try{
    setLoading(true)
-      const prompt =  {input}
+      const prompt = `Generate an image of ${input} in the style ${selectedstyle}`
       const {data}  = await axios.post('/api/ai/generate-image',{prompt,publish},
         {headers: {Authorization:`Bearer ${await getToken()}`}})
     
